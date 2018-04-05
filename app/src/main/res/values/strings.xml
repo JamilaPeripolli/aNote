@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">aNote</string>
+    <string name="bt_add">+</string>
+    <string name="et_title">Title</string>
+    <string name="cb_important">Important</string>
+    <string name="et_description">Description</string>
+    <string name="bt_save">Save</string>
 </resources>

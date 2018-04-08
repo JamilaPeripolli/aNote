@@ -34,6 +34,6 @@ public class AddNote extends AppCompatActivity {
         EditText etDescription = findViewById(R.id.et_description);
         CheckBox cbImportant = findViewById(R.id.cb_important);
 
-        return new Note(etTitle.getText().toString(), etDescription.getText().toString(), cbImportant.isActivated());
+        return new Note(etTitle.getText().toString(), etDescription.getText().toString(), cbImportant.isChecked());
     }
 }

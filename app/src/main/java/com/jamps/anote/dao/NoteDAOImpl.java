@@ -35,6 +35,7 @@ public class NoteDAOImpl implements NoteDAO{
 
         if(note.isImportant()) {
             importantNotes.add(note);
+            return;
         }
 
         notes.add(note);

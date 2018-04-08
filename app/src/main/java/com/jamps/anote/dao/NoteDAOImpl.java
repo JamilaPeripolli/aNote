@@ -53,7 +53,7 @@ public class NoteDAOImpl implements NoteDAO{
     private boolean removeFromList(List<Note> notesList, Long id) {
         for (int i = 0; i < notesList.size(); i ++) {
             if (id.equals(notesList.get(i).getId())) {
-                notes.remove(i);
+                notesList.remove(i);
                 return true;
             }
         }

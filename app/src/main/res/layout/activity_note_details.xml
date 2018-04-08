@@ -58,8 +58,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorLigth"
-            android:textColor="@color/colorAccent"
-            android:text="@string/bt_remove" />
+            android:onClick="removeNote"
+            android:text="@string/bt_remove"
+            android:textColor="@color/colorAccent" />
     </LinearLayout>
 
     <TextView

@@ -7,18 +7,23 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jamps.anote.dao.NoteDAO;
+import com.jamps.anote.dao.NoteDAOImpl;
+
 public class NoteDetails extends AppCompatActivity {
 
     private Long id;
     private String title;
     private String description;
     private boolean isImportant;
+    private NoteDAO dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_details);
 
+        dao = NoteDAOImpl.getInstance();
         getNoteDetails(getIntent().getExtras());
         fillNoteDetails();
     }
@@ -44,6 +49,11 @@ public class NoteDetails extends AppCompatActivity {
     }
 
     public void back(View view) {
+        finish();
+    }
+
+    public void removeNote(View view) {
+        dao.delete(id);
         finish();
     }
 

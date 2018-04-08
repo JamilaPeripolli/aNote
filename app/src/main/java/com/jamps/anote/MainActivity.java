@@ -3,6 +3,7 @@ package com.jamps.anote;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -16,6 +17,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
+    private final String TAG = "MainActivity";
     private ListView lvNotes;
     private NoteDAO dao;
 
@@ -49,6 +51,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Intent intent = new Intent(this, NoteDetails.class);
+        Note note = (Note) parent.getItemAtPosition(position);
+        intent.putExtra("id", note.getId());
+        intent.putExtra("title", note.getTitle());
+        intent.putExtra("description", note.getDescription());
+        intent.putExtra("isImportant", note.isImportant());
+        startActivity(intent);
     }
 }

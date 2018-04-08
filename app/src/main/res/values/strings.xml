@@ -7,4 +7,9 @@
     <string name="bt_save">Save</string>
     <string name="bt_back">Back</string>
     <string name="bt_remove">Remove</string>
+    <string name="app_description_p1">Welcome to aNote! This is a space for you to note down everything you like.</string>
+    <string name="app_description_p2">To add a note just click the \"+\" button. Remember you can mark your note as important to see it first in the list.</string>
+    <string name="app_description_p3">To see details of a note, just click on that in the list.</string>
+    <string name="app_description_p4">When you don\'t need a note anymore, you can remove it: first click on that in the list then click on the \"remove\" button.</string>
+    <string name="app_description_p5">Thanks for using aNote!</string>
 </resources>

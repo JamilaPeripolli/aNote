@@ -59,4 +59,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         intent.putExtra("isImportant", note.isImportant());
         startActivity(intent);
     }
+
+    public void openInfo(View view) {
+        Intent intent = new Intent(this, Info.class);
+        startActivity(intent);
+    }
 }

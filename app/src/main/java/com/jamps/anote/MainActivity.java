@@ -3,11 +3,11 @@ package com.jamps.anote;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.jamps.anote.R;
 import com.jamps.anote.adapter.NoteAdapter;
 import com.jamps.anote.dao.NoteDAO;
 import com.jamps.anote.dao.NoteDAOImpl;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void fillNotesList() {
         dao = NoteDAOImpl.getInstance();
-        List<Note> notes = dao.getAll();
+        List<Note> notes = dao.getAll(this);
 
         NoteAdapter adapter = new NoteAdapter(this, notes);
 

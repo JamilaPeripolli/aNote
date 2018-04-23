@@ -15,16 +15,18 @@ public class AddNote extends AppCompatActivity {
 
     private final String TAG = "AddNote";
 
-    private NoteDAO noteDAO = NoteDAOImpl.getInstance();
+    private NoteDAO noteDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_note);
+
+        noteDAO = NoteDAOImpl.getInstance();
     }
 
     public void save(View view) {
-        noteDAO.add(extractNote(view));
+        noteDAO.add(this, extractNote(view));
         Log.i(TAG, "Note added successfully!");
         finish();
     }

@@ -7,6 +7,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jamps.anote.R;
 import com.jamps.anote.dao.NoteDAO;
 import com.jamps.anote.dao.NoteDAOImpl;
 
@@ -53,7 +54,7 @@ public class NoteDetails extends AppCompatActivity {
     }
 
     public void removeNote(View view) {
-        dao.delete(id);
+        dao.delete(this, id);
         finish();
     }
 

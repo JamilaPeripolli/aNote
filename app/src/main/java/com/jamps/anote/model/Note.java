@@ -16,12 +16,15 @@ public class Note {
         this.important = important;
     }
 
-    public Long getId() {
-        return id;
+    public Note(Long id, String title, String description, boolean important) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.important = important;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getId() {
+        return id;
     }
 
     public String getTitle() {

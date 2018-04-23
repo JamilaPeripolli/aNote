@@ -1,3 +1,3 @@
 # aNote
 Instruções de uso:
-[aNote.pdf](./app/src/main/roes/dcuments/aNote.pdf)
+[aNote.pdf](./app/src/main/res/dcuments/aNote.pdf)
